@@ -1,5 +1,11 @@
 stages:
-   - build
+  - test
+  - build
+
+test:
+  stage: test
+  script:
+    - echo "=====test====="
 
 docker-build:
   stage: build
