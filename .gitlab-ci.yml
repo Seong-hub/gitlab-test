@@ -12,6 +12,8 @@ test:
 docker-build:
   stage: build
   image: docker:latest
+  tags:
+    - gitlab-test
   services:
     - docker:dind
   script:
