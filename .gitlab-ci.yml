@@ -15,7 +15,7 @@ docker-build:
   tags:
     - gitlab-test
   services:
-    - docker:dind
+    - docker:18.09.7-dind
   script:
     - docker build . -t $CI_REGISTRY_USER/gitlab-test
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
